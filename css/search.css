@@ -1,0 +1,103 @@
+:root {
+  --pos-color: linear-gradient(45deg, rgb(153, 0, 255), #00ffff);
+  --two-color: white;
+}
+
+.research {
+  background-image: var(--pos-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+  position: relative;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  margin: 50px auto;
+}
+
+.research:hover {
+  width: 260px;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  color: var(--two-color);
+  top: 50%;
+  transform: translateY(50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  right: 12px;
+  cursor: pointer;
+}
+
+.inser {
+  position: absolute;
+  color: var(--two-color);
+  border-radius: 10px;
+  border: none;
+  background-color: var(--pos-color);
+  top: 50%;
+  opacity: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 10px;
+  display: none;
+}
+
+.research:hover .inser {
+  display: block;
+  animation-name: insee;
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes insee {
+  to {
+    opacity: 1;
+  }
+}
+
+.inser::placeholder {
+  color: var(--two-color);
+  word-spacing: 1px;
+  letter-spacing: 0.8px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.inser::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background-image: url("../delete.png");
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+}
